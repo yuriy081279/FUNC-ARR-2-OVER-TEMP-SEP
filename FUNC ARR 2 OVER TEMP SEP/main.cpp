@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 #define tab "\t"
 const int STROKA = 3;
@@ -56,60 +56,60 @@ void main()
 
 	FillRand(i_arr_2, STROKA, STOLB);
 	Print(i_arr_2, STROKA, STOLB);
-	cout << " Ñóììà ýëåìåíòîâ äàííîãî ìàññèâà = " << Sum(i_arr_2, STROKA, STOLB) << endl;
-	cout << " Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ýòîãî ìàññèâà = " << Avg(i_arr_2, STROKA, STOLB) << endl;
-	cout << " Ìèíèìàëüíîå çíà÷åíèå â ýòîì ìàññèâå = " << minValueIn(i_arr_2, STROKA, STOLB) << endl;
-	cout << " Ìàêñèìàëüíîå çíà÷åíèå â ýòîì ìàññèâå = " << maxValueIn(i_arr_2, STROKA, STOLB) << endl;
+	cout << " Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° = " << Sum(i_arr_2, STROKA, STOLB) << endl;
+	cout << " Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑÑ‚Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° = " << Avg(i_arr_2, STROKA, STOLB) << endl;
+	cout << " ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² ÑÑ‚Ð¾Ð¼ Ð¼Ð°ÑÑÐ¸Ð²Ðµ = " << minValueIn(i_arr_2, STROKA, STOLB) << endl;
+	cout << " ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² ÑÑ‚Ð¾Ð¼ Ð¼Ð°ÑÑÐ¸Ð²Ðµ = " << maxValueIn(i_arr_2, STROKA, STOLB) << endl;
 	shiftLeft(i_arr_2, STROKA, STOLB);
-	cout << " Ñäâèíóòûé ìàññèâ âëåâî íà " << y << " ýëåìåíòà" << endl;
+	cout << " Ð¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð»ÐµÐ²Ð¾ Ð½Ð° " << y << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
 	Print(i_arr_2, STROKA, STOLB);
 	shiftRight(i_arr_2, STROKA, STOLB);
-	cout << " Ñäâèíóòûé ìàññèâ âïðàâî íà " << y << " ýëåìåíòà" << endl;
+	cout << " Ð¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð° " << y << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
 	Print(i_arr_2, STROKA, STOLB);
 	cout << "------------------------------------------------";
 
 	cout << endl << endl;
 	FillRand(i_brr_2, STROKA, STOLB);
 	Print(i_brr_2, STROKA, STOLB);
-	cout << " Ñóììà ýëåìåíòîâ äàííîãî ìàññèâà = " << Sum(i_brr_2, STROKA, STOLB) << endl;
-	cout << " Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ýòîãî ìàññèâà = " << Avg(i_brr_2, STROKA, STOLB) << endl;
-	cout << " Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå = " << minValueIn(i_brr_2, STROKA, STOLB) << endl;
-	cout << " Ìàêñèìàëüíîå çíà÷åíèå â ýòîì ìàññèâå = " << maxValueIn(i_brr_2, STROKA, STOLB) << endl;
+	cout << " Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° = " << Sum(i_brr_2, STROKA, STOLB) << endl;
+	cout << " Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑÑ‚Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° = " << Avg(i_brr_2, STROKA, STOLB) << endl;
+	cout << " ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ = " << minValueIn(i_brr_2, STROKA, STOLB) << endl;
+	cout << " ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² ÑÑ‚Ð¾Ð¼ Ð¼Ð°ÑÑÐ¸Ð²Ðµ = " << maxValueIn(i_brr_2, STROKA, STOLB) << endl;
 	shiftLeft(i_brr_2, STROKA, STOLB);
-	cout << " Ñäâèíóòûé ìàññèâ âëåâî íà " << y << " ýëåìåíòà" << endl;
+	cout << " Ð¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð»ÐµÐ²Ð¾ Ð½Ð° " << y << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
 	Print(i_brr_2, STROKA, STOLB);
 	shiftRight(i_brr_2, STROKA, STOLB);
-	cout << " Ñäâèíóòûé ìàññèâ âïðàâî íà " << y << " ýëåìåíòà" << endl;
+	cout << " Ð¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð° " << y << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
 	Print(i_brr_2, STROKA, STOLB);
 	cout << "------------------------------------------------";
 
 	cout << endl << endl;
 	FillRand(i_crr_2, STROKA, STOLB);
 	Print(i_crr_2, STROKA, STOLB);
-	cout << " Ñóììà ýëåìåíòîâ äàííîãî ìàññèâà = " << Sum(i_crr_2, STROKA, STOLB) << endl << endl;
-	cout << " Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ýòîãî ìàññèâà = " << Avg(i_crr_2, STROKA, STOLB) << endl << endl;
-	cout << " Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå  = " << minValueIn(i_crr_2, STROKA, STOLB) << endl << endl;
-	cout << " Ìàêñèìàëüíîå çíà÷åíèå â ýòîì ìàññèâå = " << maxValueIn(i_crr_2, STROKA, STOLB) << endl << endl;
+	cout << " Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° = " << Sum(i_crr_2, STROKA, STOLB) << endl << endl;
+	cout << " Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑÑ‚Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° = " << Avg(i_crr_2, STROKA, STOLB) << endl << endl;
+	cout << " ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ  = " << minValueIn(i_crr_2, STROKA, STOLB) << endl << endl;
+	cout << " ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² ÑÑ‚Ð¾Ð¼ Ð¼Ð°ÑÑÐ¸Ð²Ðµ = " << maxValueIn(i_crr_2, STROKA, STOLB) << endl << endl;
 	shiftLeft(i_crr_2, STROKA, STOLB);
-	cout << " Ñäâèíóòûé ìàññèâ âëåâî íà " << y << " ýëåìåíòà" << endl;
+	cout << " Ð¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð»ÐµÐ²Ð¾ Ð½Ð° " << y << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
 	Print(i_crr_2, STROKA, STOLB);
 	shiftRight(i_crr_2, STROKA, STOLB);
-	cout << " Ñäâèíóòûé ìàññèâ âïðàâî íà " << y << " ýëåìåíòà" << endl;
+	cout << " Ð¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð° " << y << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
 	Print(i_crr_2, STROKA, STOLB);
 	cout << "------------------------------------------------";
 
 	cout << endl << endl;
 	FillRand(i_drr_2, STROKA, STOLB);
 	Print(i_drr_2, STROKA, STOLB);
-	cout << " Ñóììà ýëåìåíòîâ äàííîãî ìàññèâà = " << Sum(i_drr_2, STROKA, STOLB) << endl << endl;
-	cout << " Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ýòîãî ìàññèâà = " << Avg(i_drr_2, STROKA, STOLB) << endl << endl;
-	cout << " Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå = " << minValueIn(i_drr_2, STROKA, STOLB) << endl << endl;
-	cout << " Ìàêñèìàëüíîå çíà÷åíèå â ýòîì ìàññèâå = " << maxValueIn(i_drr_2, STROKA, STOLB) << endl << endl;
+	cout << " Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° = " << Sum(i_drr_2, STROKA, STOLB) << endl << endl;
+	cout << " Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑÑ‚Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° = " << Avg(i_drr_2, STROKA, STOLB) << endl << endl;
+	cout << " ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ = " << minValueIn(i_drr_2, STROKA, STOLB) << endl << endl;
+	cout << " ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² ÑÑ‚Ð¾Ð¼ Ð¼Ð°ÑÑÐ¸Ð²Ðµ = " << maxValueIn(i_drr_2, STROKA, STOLB) << endl << endl;
 	shiftLeft(i_drr_2, STROKA, STOLB);
-	cout << " Ñäâèíóòûé ìàññèâ âëåâî íà " << y << " ýëåìåíòà" << endl;
+	cout << " Ð¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð»ÐµÐ²Ð¾ Ð½Ð° " << y << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
 	Print(i_drr_2, STROKA, STOLB);
 	shiftRight(i_drr_2, STROKA, STOLB);
-	cout << " Ñäâèíóòûé ìàññèâ âïðàâî íà " << y << " ýëåìåíòà" << endl;
+	cout << " Ð¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð° " << y << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
 	Print(i_drr_2, STROKA, STOLB);
 }
 
