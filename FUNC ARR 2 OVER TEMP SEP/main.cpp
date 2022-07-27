@@ -3,47 +3,33 @@ using namespace std;
 #define tab "\t"
 const int STROKA = 3;
 const int STOLB = 4;
-int y = 4;
+float y = 4;
 
 void FillRand(int arr[STROKA][STOLB], const int STROKA, const int STOLB);
 void FillRand(double arr[STROKA][STOLB], const int STROKA, const int STOLB);
 void FillRand(char arr[STROKA][STOLB], const int STROKA, const int STOLB);
 void FillRand(float arr[STROKA][STOLB], const int STROKA, const int STOLB);
 
-void Print(int arr[STROKA][STOLB], const int STROKA, const int STOLB);
-void Print(double arr[STROKA][STOLB], const int STROKA, const int STOLB);
-void Print(char arr[STROKA][STOLB], const int STROKA, const int STOLB);
-void Print(float arr[STROKA][STOLB], const int STROKA, const int STOLB);
+template<typename T>
+void Print(T arr[STROKA][STOLB], const int STROKA, const int STOLB);
 
-double Sum(int arr[STROKA][STOLB], const int STROKA, const int STOLB);
-double Sum(double arr[STROKA][STOLB], const int STROKA, const int STOLB);
-char Sum(char arr[STROKA][STOLB], const int STROKA, const int STOLB);
-float Sum(float arr[STROKA][STOLB], const int STROKA, const int STOLB);
+template<typename T>
+double Sum(T arr[STROKA][STOLB], const int STROKA, const int STOLB);
 
-double Avg(int arr[STROKA][STOLB], const int STROKA, const int STOLB);
-double Avg(double arr[STROKA][STOLB], const int STROKA, const int STOLB);
-char Avg(char arr[STROKA][STOLB], const int STROKA, const int STOLB);
-float Avg(float arr[STROKA][STOLB], const int STROKA, const int STOLB);
+template<typename T>
+double Avg(T arr[STROKA][STOLB], const int STROKA, const int STOLB);
 
-int minValueIn(int arr[STROKA][STOLB], const int STROKA, const int STOLB);
-double minValueIn(double arr[STROKA][STOLB], const int STROKA, const int STOLB);
-char minValueIn(char arr[STROKA][STOLB], const int STROKA, const int STOLB);
-float minValueIn(float arr[STROKA][STOLB], const int STROKA, const int STOLB);
+template<typename T>
+T minValueIn(T arr[STROKA][STOLB], const int STROKA, const int STOLB);
 
-int maxValueIn(int arr[STROKA][STOLB], const int STROKA, const int STOLB);
-double maxValueIn(double arr[STROKA][STOLB], const int STROKA, const int STOLB);
-char maxValueIn(char arr[STROKA][STOLB], const int STROKA, const int STOLB);
-float maxValueIn(float arr[STROKA][STOLB], const int STROKA, const int STOLB);
+template<typename T>
+T maxValueIn(T arr[STROKA][STOLB], const int STROKA, const int STOLB);
 
-void shiftLeft(int arr[STROKA][STOLB], const int STROKA, const int STOLB);
-void shiftLeft(double brr[STROKA][STOLB], const int STROKA, const int STOLB);
-void shiftLeft(char crr[STROKA][STOLB], const int STROKA, const int STOLB);
-void shiftLeft(float drr[STROKA][STOLB], const int STROKA, const int STOLB);
+template<typename T>
+void shiftLeft(T arr[STROKA][STOLB], const int STROKA, const int STOLB);
 
-void shiftRight(int arr[STROKA][STOLB], const int STROKA, const int STOLB);
-void shiftRight(double brr[STROKA][STOLB], const int STROKA, const int STOLB);
-void shiftRight(char crr[STROKA][STOLB], const int STROKA, const int STOLB);
-void shiftRight(float drr[STROKA][STOLB], const int STROKA, const int STOLB);
+template<typename T>
+void shiftRight(T arr[STROKA][STOLB], const int STROKA, const int STOLB);
 
 void main()
 {
@@ -155,7 +141,8 @@ void FillRand(float arr[STROKA][STOLB], const int STROKA, const int STOLB)
 		}
 	}
 }
-void Print(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
+template<typename T>
+void Print(T arr[STROKA][STOLB], const int STROKA, const int STOLB)
 {
 	for (int i = 0; i < STROKA; i++)
 	{
@@ -166,52 +153,8 @@ void Print(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
 		cout << endl;
 	}
 }
-void Print(double arr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			cout << arr[i][j] << tab;
-		}
-		cout << endl;
-	}
-}
-void Print(char arr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			cout << arr[i][j] << tab;
-		}
-		cout << endl;
-	}
-}
-void Print(float arr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			cout << arr[i][j] << tab;
-		}
-		cout << endl;
-	}
-}
-double Sum(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	int SUM = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			SUM += arr[i][j];
-		}
-	}
-	return (double)SUM;
-}
-double Sum(double arr[STROKA][STOLB], const int STROKA, const int STOLB)
+template<typename T>
+double Sum(T arr[STROKA][STOLB], const int STROKA, const int STOLB)
 {
 	double SUM = 0;
 	for (int i = 0; i < STROKA; i++)
@@ -221,51 +164,17 @@ double Sum(double arr[STROKA][STOLB], const int STROKA, const int STOLB)
 			SUM += arr[i][j];
 		}
 	}
-	return SUM;
-}
-char Sum(char arr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	char SUM = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			SUM += arr[i][j];
-		}
-	}
-	return SUM;
-}
-float Sum(float arr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	float SUM = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			SUM += arr[i][j];
-		}
-	}
-	return SUM;
+	return (double)SUM;
 }
 
-double Avg(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
+template<typename T>
+double Avg(T arr[STROKA][STOLB], const int STROKA, const int STOLB)
 {
 	return Sum(arr, STROKA, STOLB) / (STROKA * STOLB);
 }
-double Avg(double brr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	return Sum(brr, STROKA, STOLB) / (STROKA * STOLB);
-}
-char Avg(char crr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	return Sum(crr, STROKA, STOLB) / (STROKA * STOLB);
-}
-float Avg(float drr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	return Sum(drr, STROKA, STOLB) / (STROKA * STOLB);
-}
 
-int minValueIn(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
+template<typename T>
+T minValueIn(T arr[STROKA][STOLB], const int STROKA, const int STOLB)
 {
 	int x = 0;
 	for (int i = 0; i < STROKA; i++)
@@ -291,86 +200,8 @@ int minValueIn(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
 		}
 	}
 }
-double minValueIn(double brr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	int x = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-
-			for (int c = 0; c < STROKA; c++)
-			{
-				for (int d = 0; d < STOLB; d++)
-				{
-					if (brr[i][j] >= brr[c][d])
-					{
-						++x;
-					}
-				}
-			}
-			if (x == 0)
-			{
-				return brr[i][j];
-
-			}
-			x = 0;
-		}
-	}
-}
-char minValueIn(char crr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	int x = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			for (int c = 0; c < STROKA; c++)
-			{
-				for (int d = 0; d < STOLB; d++)
-				{
-					if (crr[i][j] >= crr[c][d])
-					{
-						++x;
-					}
-				}
-			}
-			if (x == 0)
-			{
-				return crr[i][j];
-
-			}
-			x = 0;
-		}
-	}
-}
-float minValueIn(float drr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	int x = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			for (int c = 0; c < STROKA; c++)
-			{
-				for (int d = 0; d < STOLB; d++)
-				{
-					if (drr[i][j] > drr[c][d])
-					{
-						++x;
-					}
-				}
-			}
-			if (x == 0)
-			{
-				return drr[i][j];
-
-			}
-			x = 0;
-		}
-	}
-}
-int maxValueIn(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
+template<typename T>
+T maxValueIn(T arr[STROKA][STOLB], const int STROKA, const int STOLB)
 {
 	int x = 0;
 	for (int i = 0; i < STROKA; i++)
@@ -396,95 +227,12 @@ int maxValueIn(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
 		}
 	}
 }
-double maxValueIn(double brr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-
-	int x = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-
-			for (int c = 0; c < STROKA; c++)
-			{
-				for (int d = 0; d < STOLB; d++)
-				{
-					if (brr[i][j] < brr[c][d])
-					{
-						++x;
-
-					}
-				}
-			}
-			if (x == 0)
-			{
-				return brr[i][j];
-
-			}
-			x = 0;
-		}
-	}
-}
-char maxValueIn(char crr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-
-	int x = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			for (int c = 0; c < STROKA; c++)
-			{
-				for (int d = 0; d < STOLB; d++)
-				{
-					if (crr[i][j] < crr[c][d])
-					{
-						++x;
-					}
-				}
-			}
-			if (x == 0)
-			{
-				return crr[i][j];
-
-			}
-			x = 0;
-		}
-	}
-}
-float maxValueIn(float drr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-
-	int x = 0;
-	for (int i = 0; i < STROKA; i++)
-	{
-		for (int j = 0; j < STOLB; j++)
-		{
-			for (int c = 0; c < STROKA; c++)
-			{
-				for (int d = 0; d < STOLB; d++)
-				{
-					if (drr[i][j] < drr[c][d])
-					{
-						++x;
-					}
-				}
-			}
-			if (x == 0)
-			{
-				return drr[i][j];
-
-			}
-			x = 0;
-		}
-	}
-}
-
-void shiftLeft(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
+template<typename T>
+void shiftLeft(T arr[STROKA][STOLB], const int STROKA, const int STOLB)
 {
 	for (int i = 0; i < y; i++)
 	{
-		int x = arr[0][0];
+		T x = arr[0][0];
 		for (int i = 0; i < STROKA; i++)
 		{
 			for (int j = 0; j < STOLB; j++)
@@ -495,11 +243,12 @@ void shiftLeft(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
 		arr[STROKA - 1][STOLB - 1] = x;
 	}
 }
-void shiftRight(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
+template<typename T>
+void shiftRight(T arr[STROKA][STOLB], const int STROKA, const int STOLB)
 {
 	for (int i = 0; i < y; i++)
 	{
-		int x = arr[STROKA - 1][STOLB - 1];
+		T x = arr[STROKA - 1][STOLB - 1];
 		for (int i = STROKA - 1; i >= 0; i--)
 		{
 			for (int j = STOLB - 1; j >= 0; j--)
@@ -508,100 +257,6 @@ void shiftRight(int arr[STROKA][STOLB], const int STROKA, const int STOLB)
 			}
 		}
 		arr[0][0] = x;
-	}
-	cout << endl;
-}
-
-void shiftLeft(double brr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < y; i++)
-	{
-		double x = brr[0][0];
-		for (int i = 0; i < STROKA; i++)
-		{
-			for (int j = 0; j < STOLB; j++)
-			{
-				brr[i][j] = brr[i][j + 1];
-			}
-		}
-		brr[STROKA - 1][STOLB - 1] = x;
-	}
-}
-void shiftRight(double brr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < y; i++)
-	{
-		double x = brr[STROKA - 1][STOLB - 1];
-		for (int i = STROKA - 1; i >= 0; i--)
-		{
-			for (int j = STOLB - 1; j >= 0; j--)
-			{
-				brr[i][j] = brr[i][j - 1];
-			}
-		}
-		brr[0][0] = x;
-	}
-	cout << endl;
-}
-void shiftLeft(char crr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < y; i++)
-	{
-		char x = crr[0][0];
-		for (int i = 0; i < STROKA; i++)
-		{
-			for (int j = 0; j < STOLB; j++)
-			{
-				crr[i][j] = crr[i][j + 1];
-			}
-		}
-		crr[STROKA - 1][STOLB - 1] = x;
-	}
-}
-void shiftRight(char crr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < y; i++)
-	{
-		char x = crr[STROKA - 1][STOLB - 1];
-		for (int i = STROKA - 1; i >= 0; i--)
-		{
-			for (int j = STOLB - 1; j >= 0; j--)
-			{
-				crr[i][j] = crr[i][j - 1];
-			}
-		}
-		crr[0][0] = x;
-	}
-	cout << endl;
-}
-void shiftLeft(float drr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < y; i++)
-	{
-		float x = drr[0][0];
-		for (int i = 0; i < STROKA; i++)
-		{
-			for (int j = 0; j < STOLB; j++)
-			{
-				drr[i][j] = drr[i][j + 1];
-			}
-		}
-		drr[STROKA - 1][STOLB - 1] = x;
-	}
-}
-void shiftRight(float drr[STROKA][STOLB], const int STROKA, const int STOLB)
-{
-	for (int i = 0; i < y; i++)
-	{
-		float x = drr[STROKA - 1][STOLB - 1];
-		for (int i = STROKA - 1; i >= 0; i--)
-		{
-			for (int j = STOLB - 1; j >= 0; j--)
-			{
-				drr[i][j] = drr[i][j - 1];
-			}
-		}
-		drr[0][0] = x;
 	}
 	cout << endl;
 }
